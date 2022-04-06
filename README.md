@@ -1,0 +1,2 @@
+# studyingBasicJS
+studying basic javascript
