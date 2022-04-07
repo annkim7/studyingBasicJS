@@ -1,2 +1,2 @@
 # studyingBasicJS
-studying basic javascript
+studying basic javascript in Coding Apple

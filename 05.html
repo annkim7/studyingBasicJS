@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 이벤트리스너</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p id="title">알림창임</p>
+        <button id="close">닫기</button>
+    </div>
+    <button onclick="아이디알림창()">버튼1</button>
+    <button onclick="비번알림창()">버튼2</button>
+    <script>
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display = 'none';
+        });
+
+        function 알림창열기(){
+            document.getElementById('alert').style.display = 'none';
+        }
+
+        function 아이디알림창(){
+            // 1. p태그 내용을 아이디입력으로 바꿈
+            document.getElementById('title').innerHTML = '아이디입력하셈';
+            // 2. 띄움
+            document.getElementById('alert').style.display = 'block';
+        }
+
+        function 비번알림창(){
+            document.getElementById('title').innerHTML = '비번입력하셈~';
+            document.getElementById('alert').style.display = 'block';
+        }
+        
+
+        
+    </script>
+</body>
+</html>
