@@ -31,7 +31,7 @@
 
     <script>
         game(11);
-        //과제
+        //과제 1
         function game(number){
           if(number%3 == 0){
             if(number%9 == 0){
@@ -43,7 +43,47 @@
             console.log('통과');
           }
         }
-        
+
+        //과제 2
+        pass(70, 70);
+        pass(30, 100);
+        pass(50, 50);
+        function pass(a, b){
+          if(a + b >= 120){
+            if(a > 40 && b > 40){
+              console.log('합격');
+            }else{
+              console.log('불합격');
+            }
+          }else{
+            console.log('불합격');
+          }
+        }
+
+        //과제3
+        gameA(3);
+        gameA(56);
+        gameA(89);
+        function gameA(number){
+          if(number%10 == 3){
+            console.log('박수3');
+          }else if(number%10 == 6){
+            console.log('박수6');
+          }else if(number%10 == 9){
+            console.log('박수9');
+          }
+        }
+
+        //과제4
+        gameB(-10);
+        gameB(50);
+        gameB(130);
+        function gameB(number){
+          if( number < 0 || number > 100 ){
+            alert('경고');
+            console.log(number);
+          }
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
