@@ -4,27 +4,47 @@
 //- 모든 div에 붙은 show 클래스명 제거
 //- div0에 show 클래스명 추가
 
-$('.tab-button').eq(0).on('click', function(){
-    //과제
-    $('.tab-button').removeClass('orange');
-    $('.tab-button').eq(0).addClass('orange');
+// for(let i = 0; i<3; i++){
+//     $('.tab-button').eq(i).on('click', function(){
+//         $('.tab-button').removeClass('orange');
+//         $('.tab-button').eq(i).addClass('orange');
 
-    $('.tab-content').removeClass('show');
-    $('.tab-content').eq(0).addClass('show');
-});
+//         $('.tab-content').removeClass('show');
+//         $('.tab-content').eq(i).addClass('show');
+//     });
+// }
+
 //과제
-$('.tab-button').eq(1).on('click', function(){
-    $('.tab-button').removeClass('orange');
-    $('.tab-button').eq(1).addClass('orange');
+for(let i = 0; i<$('.tab-button').length; i++){
+    $('.tab-button').eq(i).on('click', function(){
+        $('.tab-button').removeClass('orange');
+        $('.tab-button').eq(i).addClass('orange');
 
-    $('.tab-content').removeClass('show');
-    $('.tab-content').eq(1).addClass('show');
-});
-//과제
-$('.tab-button').eq(2).on('click', function(){
-    $('.tab-button').removeClass('orange');
-    $('.tab-button').eq(2).addClass('orange');
+        $('.tab-content').removeClass('show');
+        $('.tab-content').eq(i).addClass('show');
+    });
+}
 
-    $('.tab-content').removeClass('show');
-    $('.tab-content').eq(2).addClass('show');
-});
+// $('.tab-button').eq(0).on('click', function(){
+//     $('.tab-button').removeClass('orange');
+//     $('.tab-button').eq(0).addClass('orange');
+
+//     $('.tab-content').removeClass('show');
+//     $('.tab-content').eq(0).addClass('show');
+// });
+
+// $('.tab-button').eq(1).on('click', function(){
+//     $('.tab-button').removeClass('orange');
+//     $('.tab-button').eq(1).addClass('orange');
+
+//     $('.tab-content').removeClass('show');
+//     $('.tab-content').eq(1).addClass('show');
+// });
+
+// $('.tab-button').eq(2).on('click', function(){
+//     $('.tab-button').removeClass('orange');
+//     $('.tab-button').eq(2).addClass('orange');
+
+//     $('.tab-content').removeClass('show');
+//     $('.tab-content').eq(2).addClass('show');
+// });
