@@ -12,18 +12,22 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!--과제-->
-    <div class="cart">
-      <h5></h5>
-      <p></p>
-    </div>
-    
+    <div class="list">장바구니 페이지</div>
+
+
     <script>
-      var name = localStorage.getItem('name');
-      var price = localStorage.getItem('price');
-      
-      $('.cart h5').text(name);
-      $('.cart p').text(price);
+      //로컬 스토리지에서 cart 꺼내주세요
+      //array 갯수만큼 p 생성해주셈
+
+      //과제
+      var cart = JSON.parse(localStorage.getItem('cart'));
+      console.log(cart);
+
+      cart.forEach(function(a){
+        var item = `<p>${a}</p>`;
+
+        $('.list').append(item);
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
