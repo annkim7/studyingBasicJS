@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="card-background">
+    <div class="card-box">
+      <img src="card1.png">
+    </div>
+    <div class="card-box">
+      <img src="card2.png">
+    </div>
+    <div class="card-box">
+      <img src="card3.png">
+    </div>
+  </div>
+
+  <script>
+    $(window).scroll(function(){
+      var 높이 = $(window).scrollTop();
+      console.log(높이);
+
+      //650~1150까지 스크롤바를 내리면,
+      //첫째카드의 opacity 1~0으로 서서히 변경해주셈
+      var y = (-1/500) * 높이 + 115/50;
+      
+      //y = a * 높이 + b
+      //1 = a * 650 + b
+      //0 = a * 1150 + b
+      a = -1/500;
+      b = 115/50;
+
+      //과제
+      //1 = a * 650 + b;
+      //0.8 = a * 1150 + b;
+      // a *650 = 1-b
+      // a*1150 = 0.8-b
+      //a = (1-b)/650
+      //(1-b)/650 * 1150 = 0.8-b
+      //(1-b)*23/13 = 0.8-b
+      //23/13 - 0.8 = -(13/13)b + (23/13)b 
+      //23/13 - 4/5 = 10/13* b
+      //115/65 - 52/65 = 10/13*b
+      //63/65 * 13/10 = b
+      //63/50 = b
+      a = -1/2500;
+      b = 63/50;
+
+
+
+      var size = (-1/2500) * 높이 + 63/50;
+
+      $('.card-box').eq(0).css('opacity', y);
+      $('.card-box').eq(0).css('transform', 'scale('+size+')');
+    });
+  </script>
+</body>
+</html>
